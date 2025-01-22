@@ -31,7 +31,7 @@ int main(){
             cin >> thirdNum;
         }
 
-    cout << "SUCCESS! " << thirdNum << " is within range!" << endl; // edit: make this print
+    cout << "SUCCESS! " << thirdNum << " is within range!" << endl;
     
 
     return 0;
