@@ -2,6 +2,7 @@
 using namespace std;
 
 //this function displays an error msg if the high threshold is lower than the low threshold.
+
 void error (int &highNum, int &lowNum) { //& modifies og values
     while (highNum < lowNum) { //i used a while loop so the msg repeats until number is put in correctly
         cout << "ERROR: High threshold must be greater than low threshold" << endl;
@@ -10,7 +11,7 @@ void error (int &highNum, int &lowNum) { //& modifies og values
     }
 }    
 
-int main(){
+int main() {
     
     int lowThreshold, highThreshold;
     int thirdNum; //defining my variables
