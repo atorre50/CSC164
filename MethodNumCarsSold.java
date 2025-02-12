@@ -14,7 +14,7 @@ public class Main {
 
     // display all sales
     static void showAllSales(int[] numCarsSold) {
-        for (int i = 1; i < numCarsSold.length; i++ ){
+        for (int i = 1; i <= numCarsSold.length; i++ ){
             System.out.printf("Month %d: " + numCarsSold[i-1] + " cars", i);
 
             if (numCarsSold[i-1] > 20) {
