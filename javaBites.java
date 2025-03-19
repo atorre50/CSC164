@@ -51,13 +51,11 @@ public class Main {
     }
 
     static Food selectFood (Food[] menu, int option, Scanner input) {
-        if (option < 0 || option > menu.length) {
-            while (option < 1 || option > menu.length) {
+        while (option < 0 || option > menu.length) {
                 System.out.println("Invalid input, please select item from menu: ");
                 option = input.nextInt();
-            }
         }
-        else if (option == 0) {
+        if (option == 0) {
             return new Food("N/A", 0.00, "N/A"); //In case user chooses not to order anything
         }
         return menu[option - 1]; //returns the food item chosen, -1 is accounting for the index
@@ -170,6 +168,9 @@ class Order {
     public String getCustomerName() {
         return customerName;
     }
+    public double getTotalCost() {
+        return totalCost = calculateTotalCost();
+    }
 
     public double calculateTotalCost () {;
         totalCost = item1.getPrice();
@@ -184,10 +185,8 @@ class Order {
         System.out.println("Receipt:");
         System.out.println("Customer Name: " + customerName);
         System.out.println("Ordered items:");
-        System.out.println("- " + item1.getFoodName());
-        if (item2 != null) {
-            System.out.println("- " + item2.getFoodName());
-        }
+        System.out.println(" - " + item1.getFoodName());
+        System.out.println(" - " + item2.getFoodName());
         System.out.println("Total Cost: " + calculateTotalCost());
         System.out.println("Allergens: ");
         System.out.println(item1.getFoodName() + " - " + item1.getAllergens());
