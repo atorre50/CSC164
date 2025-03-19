@@ -30,6 +30,9 @@ public class Main {
             //temporary order in order to access name validation
             Order validateName = new Order(null,null,chosenName);
             chosenName = validateName.getCustomerName();
+            // ^^^^ It really doesn't make sense to have a constructor and then 
+            // have null place holders - if you want a constructor that only takes a name, then create one!
+
 
             //Ordering Item 1 & 2
             System.out.println("Enter the number of the 1st item you'd like to order: ");
@@ -150,6 +153,9 @@ class Order {
         this.item2 = item2;
         this.customerName = customerNameValidation(customerName);;  //INPUT VALIDATION: name cannot be null
     }
+
+    // It really doesn't make sense to have a constructor and then 
+    // have null place holders - if you want a constructor that only takes a name, then create one!
 
     public String customerNameValidation(String chosenName){
         while (chosenName == null || chosenName.length() == 0) {                // IntelliJ says this is equivalent to chosenName.isEmpty()
